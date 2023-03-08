@@ -16,21 +16,28 @@ install dependencies on frontend
 -npx create-react-app events-app
 -axios
 
-use bcrypt for encode password
-
+-----------------------------------------------------
+DONE:
+c̶r̶e̶a̶t̶e̶ d̶a̶t̶a̶b̶a̶s̶e̶
 create login page // react sitemap for login + events page
 
-c̶r̶e̶a̶t̶e̶ d̶a̶t̶a̶b̶a̶s̶e̶
-
 create ability to add to database
-create function to find database entry
-create function to update
 create function to delete
 
 create event - name, location, summary, date or time of event
 
 allow user to post
-allow user to edit
 allow user to delete
 
+------------------------------------------------------
+TODO:
+create function to find database entry
+create function to update
 
+allow user to edit event
+
+EXTENSIONS:
+add notification toastr when new event added
+create sign up page
+use bcrypt for encode password
+add image to an event

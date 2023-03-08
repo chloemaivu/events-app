@@ -37,6 +37,14 @@ export class ApiClient {
          return response
     }
 
+    updateEvent = async (_id, name, location, summary, date) => {
+        console.log("event " + name + location )
+        const response = await axios.put(`${url}events/${_id}`,
+         {name, location, summary, date});
+         console.log(response)
+         return response;
+    }
+
     fetchEvents = async () => {
         const event = await this.getRequest(`${url}events`)
         return event.data;
@@ -44,12 +52,6 @@ export class ApiClient {
 
     deleteEvent = async (_id) => {
         console.log(_id)
-
-// found the problem! we just have to call (`${url}events/${_id}`) as we want to concatenate
-// the endpoint together, realised this through some trial and error 
-// we were just calling an endpoint which didn't exist / passing in things in an incorrect way
-// im sure we tried this previously but may have made a typo or not refreshed the page properly!
-
         const response = await axios.delete(`${url}events/${_id}`)
         console.log(response)
         return response;

@@ -50,7 +50,7 @@ exports.delete = async function (req, res, next) {
     const eventId = req.params.id;
 
     try {
-        const event = await EventModel.findByIdAndDelete(eventId, req.body, { new: true });
+        await EventModel.findByIdAndDelete(eventId, req.body, { new: true });
         return res.send({ result: true });
     } catch (error) {
         return next(createError(500, "Error deleting event"));
@@ -66,9 +66,9 @@ exports.update = async function (req, res, next) {
         const eventId = req.params.id;
         const event = await EventModel.findByIdAndUpdate(eventId, req.body, { new: true });
         if (!event) {
-            return next(createError(404, 'event not found'));
+            return next(createError(404, 'Event not found'));
         }
-        console.log('Eevent updated:', event);
+        console.log('Event updated:', event);
         res.send(event);
     } catch (error) {
         console.error(error);

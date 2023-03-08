@@ -5,7 +5,6 @@ const router = express.Router()
 
 
 router.get("/users", users.index)
-
 router.post("/users", users.login)
 
 // when this is called we return from the database
