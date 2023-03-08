@@ -1,0 +1,36 @@
+npx create-react-app app-name
+npm install nodemon?
+make .gitignore
+use .env file to hide keys
+
+install dependencies on backend
+-nodemon
+-mongoose
+-express
+-dotenv
+-bcrypt
+-cors
+-http-errors
+
+install dependencies on frontend
+-npx create-react-app events-app
+-axios
+
+use bcrypt for encode password
+
+create login page // react sitemap for login + events page
+
+c̶r̶e̶a̶t̶e̶ d̶a̶t̶a̶b̶a̶s̶e̶
+
+create ability to add to database
+create function to find database entry
+create function to update
+create function to delete
+
+create event - name, location, summary, date or time of event
+
+allow user to post
+allow user to edit
+allow user to delete
+
+

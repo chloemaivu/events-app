@@ -1,0 +1,79 @@
+.pageContainer {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.leftSide {
+  background-color: rgb(235, 235, 235);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+}
+
+.rightSide {
+  background-color: rgb(221, 221, 221);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.submitButton {
+  margin-top: 15px;
+  height: 25px;
+  background-color: rgb(63, 63, 209);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn {
+  background-color: rgb(63, 63, 209);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton {
+  margin-top: 15px;
+  height: 25px;
+  background-color: rgb(236, 34, 78);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.deleteBtn {
+  background-color: rgb(236, 34, 78);
+  text-align: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteGroup {
+  margin-left: 25px;
+margin-bottom: auto;
+}
+
+.tableGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+Table {
+  margin-top: 20px;
+}
