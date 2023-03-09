@@ -5,6 +5,9 @@ import Eventpage from "./pages/Eventpage";
 import { ApiClient } from "./pages/ApiClient";
 import React, { useState } from "react"
 import Login from "./pages/Login";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [token, changeToken] = useState(window.localStorage.getItem("token"));
@@ -31,6 +34,7 @@ function App() {
       ) : (
         <Login loggedIn={(token) => login(token)} client={client} />
       )}
+      <ToastContainer />
     </>
   );
 }

@@ -5,7 +5,10 @@ const port = process.env.PORT || 3001
 const router = require("./router")
 const cors = require("cors")
 const { User } = require("./Models/UserModel")
+// const bodyParser = require("body-parser")
 
+
+// app.use(bodyParser())
 
 
 app.use(cors())

@@ -4,7 +4,8 @@ const eventSchema = new mongoose.Schema({
     name: String,
     location: String,
     summary: String,
-    date: Date
+    date: Date,
+    imgUrl: String
 })
 
 const EventModel = mongoose.model("Event", eventSchema)

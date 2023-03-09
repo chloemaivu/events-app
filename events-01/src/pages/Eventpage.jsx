@@ -27,7 +27,31 @@ function Eventpage(props) {
         e.target.eventName.value,
         e.target.location.value,
         e.target.summary.value,
-        e.target.date.value
+        e.target.date.value,
+        e.target.imgUrl.value
+      )
+      .then((response) => {
+        console.log(response);
+        e.target.reset();
+        getAllEvents();
+      })
+
+      .catch(() => {
+        alert("an error occured, please try again");
+      });
+  }
+
+  async function submitUpdate(e) {
+    e.preventDefault();
+
+    props.client
+      .updateEvent(
+        e.target.eventID.value,
+        e.target.eventName.value,
+        e.target.location.value,
+        e.target.summary.value,
+        e.target.date.value,
+        e.target.imgUrl.value
       )
       .then((response) => {
         console.log(response);
@@ -51,7 +75,8 @@ function Eventpage(props) {
 
       .then((response) => {
         console.log(response);
-        // e.target.reset();
+        e.target.reset();
+        getAllEvents();
       })
 
       .catch(() => {
@@ -71,6 +96,7 @@ function Eventpage(props) {
             </div>
 
             <div className="formGroup">
+
               <div className="add-event">
                 <div className="event-title">
                   <h3>Add your event!</h3>
@@ -101,6 +127,13 @@ function Eventpage(props) {
                     <Form.Control placeholder="Date" name="date" />
                   </Form.Group>
 
+                  <Form.Group className="mb-3" controlId="formimgUrl">
+                    <div className="imgUrlLabel">
+                      <Form.Label></Form.Label>
+                    </div>
+                    <Form.Control placeholder="Image Url" name="imgUrl" />
+                  </Form.Group>
+
                   <div className="submitButton">
                     <Button
                       variant="primary"
@@ -118,7 +151,7 @@ function Eventpage(props) {
                   <div className="event-title">
                     <h3>Update Event</h3>
                   </div>
-                  <Form onSubmit={(e) => submit(e)}>
+                  <Form onSubmit={(e) => submitUpdate(e)}>
                     <Form.Group className="mb-3" controlId="formName">
                       <div className="idLabel">
                         <Form.Label></Form.Label>
@@ -151,6 +184,13 @@ function Eventpage(props) {
                       </div>
                       <Form.Control placeholder="Date" name="date" />
                     </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formimgUrl">
+                    <div className="imgUrlLabel">
+                      <Form.Label></Form.Label>
+                    </div>
+                    <Form.Control placeholder="Image Url" name="imgUrl" />
+                  </Form.Group>
 
                     <div className="updateButton">
                       <Button
