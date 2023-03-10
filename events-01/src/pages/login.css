@@ -1,0 +1,47 @@
+.loginWrapper {
+  width: 400px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.loginForm {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-title {
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loginButton {
+  border: none;
+  cursor: pointer;
+}
+
+.loginBtn {
+  margin-bottom: 40px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(63, 63, 209);
+  color: white;
+  width: 146px;
+  height: 21px;
+}
+
+.welcome-title {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 75px;
+}
+.welcome-paragraph {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}

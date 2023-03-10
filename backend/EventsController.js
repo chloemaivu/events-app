@@ -65,23 +65,21 @@ exports.update = async function (req, res, next) {
 
   try {
     const eventId = req.params.id;
-    // find the event using the event id, + pass in the res.body?
-    // .... or just pass an empty array as res.body is undefined
+    // find the event using the event id, 
+    // pass an empty array as res.body is undefined
     const findEvent = await EventModel.findById(eventId, [], {
       new: true,
     });
 
-    // console log findEvent (returns our previous data)
+    // returns our previous data
     console.log("find", findEvent);
 
-    // decalare event for new data and update with new data (maybe not perfect as we are updated to
-    // empty string and then saving over this)
+    // declare event for new data and update with new data
     const event = await EventModel.findByIdAndUpdate(eventId, req.body, {
       new: true,
     });
 
     // check to see if there is nothing there by comparing old and new data
-
     if (!event.name) {
       event.name = findEvent.name;
     }
@@ -99,18 +97,13 @@ exports.update = async function (req, res, next) {
     }
 
     // save!
-
     await event.save()
 
     if (!event) {
       return next(createError(404, "Event not found"));
     }
 
-    console.log("Event updated:", event);
-
-
     // saved data is now returned and sent via updated event
-    
     res.send(event);
   } catch (error) {
     console.error(error);

@@ -1,6 +1,6 @@
 const createError = require("http-errors");
 const UserModel = require("./Models/UserModel");
-const { v4: uuidv4 } = require("uuid")
+const { v4: uuidv4 } = require("uuid");
 
 exports.index = async function (req, res) {
   try {
@@ -14,10 +14,14 @@ exports.index = async function (req, res) {
 exports.login = async function (req, res) {
   console.log("arrived");
   const user = await UserModel.findOne({ userName: req.body.userName });
-  console.log(user)
+  console.log(user);
 
-  if (!user) {return res.sendStatus(401);}
-  if (req.body.password !== user.password) {return res.sendStatus(403);}
+  if (!user) {
+    return res.sendStatus(401);
+  }
+  if (req.body.password !== user.password) {
+    return res.sendStatus(403);
+  }
 
   user.token = uuidv4();
 

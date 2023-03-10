@@ -96,7 +96,6 @@ function Eventpage(props) {
             </div>
 
             <div className="formGroup">
-
               <div className="add-event">
                 <div className="event-title">
                   <h3>Add your event!</h3>
@@ -186,11 +185,11 @@ function Eventpage(props) {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formimgUrl">
-                    <div className="imgUrlLabel">
-                      <Form.Label></Form.Label>
-                    </div>
-                    <Form.Control placeholder="Image Url" name="imgUrl" />
-                  </Form.Group>
+                      <div className="imgUrlLabel">
+                        <Form.Label></Form.Label>
+                      </div>
+                      <Form.Control placeholder="Image Url" name="imgUrl" />
+                    </Form.Group>
 
                     <div className="updateButton">
                       <Button

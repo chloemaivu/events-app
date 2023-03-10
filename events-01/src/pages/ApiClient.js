@@ -35,7 +35,7 @@ export class ApiClient {
         location,
         summary,
         date,
-        imgUrl
+        imgUrl,
       });
       toast.success("Event created successfully!");
       console.log(response);
@@ -53,7 +53,7 @@ export class ApiClient {
         summary,
         date,
         location,
-        imgUrl
+        imgUrl,
       });
       toast.success("Event updated successfully!");
       console.log(response);

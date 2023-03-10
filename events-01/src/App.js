@@ -1,13 +1,10 @@
 import "./App.css";
 import Eventpage from "./pages/Eventpage";
-
-// import { Routes, Route } from "react-router-dom";
 import { ApiClient } from "./pages/ApiClient";
-import React, { useState } from "react"
+import React, { useState } from "react";
 import Login from "./pages/Login";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [token, changeToken] = useState(window.localStorage.getItem("token"));
