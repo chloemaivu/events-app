@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-const url = "https://events-app-fyvo.onrender.com/";
+const url = "https://events-fullstack-app.onrender.com";
 
 export class ApiClient {
   constructor(tokenProvider, logoutHandler) {
